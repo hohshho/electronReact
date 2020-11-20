@@ -8,20 +8,18 @@ const createWindow = () => {
   mainWindow = new BrowserWindow({
     width: 1080,
     height: 1920,
-    frame: false,
     webPreferences: {
       nodeIntegration: true,
     },
   });
+
+  mainWindow.webContents.openDevTools();
+  //win.loadFile("./src/index.html")
   mainWindow.loadURL(
     isDev ? "http://localhost:3000" : `file://${path.join(__dirname, "../build/index.html")}`
   );
-
-  if (isDev) {
-    // Open the DevTools.
-    // BrowserWindow.addDevToolsExtension("<location to your react chrome extension>");
-    // mainWindow.webContents.openDevTools();
-  }
+  mainWindow.setMenu(null);
+  // 메뉴 창 없앤다.
   mainWindow.on("closed", () => {
     mainWindow = null;
   });

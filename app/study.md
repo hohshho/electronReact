@@ -73,3 +73,12 @@ Create-React-App으로 만들어진 앱은 기본적으로 JavaScript와 CSS 같
 
 ## electron 배포
  1) https://knphouse.tistory.com/88
+
+## 캐시 관련
+ 1) https://jrabbit.tistory.com/73?category=563144
+
+## electron 보안
+ 1) https://www.electronjs.org/docs/tutorial/security
+
+# custom titlebar
+https://www.npmjs.com/package/custom-electron-titlebar
